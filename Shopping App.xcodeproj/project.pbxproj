@@ -12,6 +12,7 @@
 		9B9B318F2232065A0041BE8B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9B9B318D2232065A0041BE8B /* Main.storyboard */; };
 		9B9B31912232065B0041BE8B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9B9B31902232065B0041BE8B /* Assets.xcassets */; };
 		9B9B31942232065B0041BE8B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9B9B31922232065B0041BE8B /* LaunchScreen.storyboard */; };
+		9BD4DE412237091900B11DEA /* transparent cart.png in Resources */ = {isa = PBXBuildFile; fileRef = 9BD4DE402237091900B11DEA /* transparent cart.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +23,7 @@
 		9B9B31902232065B0041BE8B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		9B9B31932232065B0041BE8B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		9B9B31952232065B0041BE8B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9BD4DE402237091900B11DEA /* transparent cart.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "transparent cart.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,6 +62,7 @@
 				9B9B31902232065B0041BE8B /* Assets.xcassets */,
 				9B9B31922232065B0041BE8B /* LaunchScreen.storyboard */,
 				9B9B31952232065B0041BE8B /* Info.plist */,
+				9BD4DE402237091900B11DEA /* transparent cart.png */,
 			);
 			path = "Shopping App";
 			sourceTree = "<group>";
@@ -125,6 +128,7 @@
 				9B9B31942232065B0041BE8B /* LaunchScreen.storyboard in Resources */,
 				9B9B31912232065B0041BE8B /* Assets.xcassets in Resources */,
 				9B9B318F2232065A0041BE8B /* Main.storyboard in Resources */,
+				9BD4DE412237091900B11DEA /* transparent cart.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
