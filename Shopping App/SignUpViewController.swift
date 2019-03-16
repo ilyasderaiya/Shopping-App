@@ -29,7 +29,7 @@ class SignUpViewController: UIViewController {
             return
         }
         
-        if ((txtPassword.text?.elementsEqual(txtVerifyPassword.text)) != true){
+        if ((txtPassword.text?.elementsEqual(txtVerifyPassword.text!)) != true){
             // Alert User Passwords are Not same
             return
         }
@@ -39,4 +39,21 @@ class SignUpViewController: UIViewController {
     @IBAction func btnCancelClick(_ sender: Any) {
         self.dismiss(animated: true, completion: nil)
     }
+    
+    func displayMessage(userMessage: String) -> Void {
+        DispatchQueue.main.async {
+            let alert = UIAlertController(title: "Alert", message: userMessage, preferredStyle: .alert)
+            
+            let OKAction = UIAlertAction(title: "OK", style: .default){ (action:UIAlertAction!) in
+                // Code to do something when OK button Tapped
+                print("OK Button Tapped")
+                DispatchQueue.main.async {
+                    self.dismiss(animated: true, completion: nil)
+                }
+            }
+            alert.addAction(OKAction)
+            self.present(alert, animated: true)
+        }
+    }
+    
 }
