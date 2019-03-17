@@ -7,11 +7,10 @@
 //
 
 import UIKit
+import Firebase
 
 class SignUpViewController: UIViewController {
 
-    @IBOutlet weak var txtFirstName: UITextField!
-    @IBOutlet weak var txtLastName: UITextField!
     @IBOutlet weak var txtEmail: UITextField!
     @IBOutlet weak var txtPassword: UITextField!
     @IBOutlet weak var txtVerifyPassword: UITextField!
@@ -24,7 +23,7 @@ class SignUpViewController: UIViewController {
     
 
     @IBAction func btnSignUpClick(_ sender: Any) {
-        if (txtFirstName.text?.isEmpty)! || (txtLastName.text?.isEmpty)! || (txtEmail.text?.isEmpty)! || (txtPassword.text?.isEmpty)! || (txtVerifyPassword.text?.isEmpty)! {
+        if (txtEmail.text?.isEmpty)! || (txtPassword.text?.isEmpty)! || (txtVerifyPassword.text?.isEmpty)! {
             // Allert User to Enter All Details
             displayMessage(userMessage: "All field are required to be filled!")
             return
@@ -35,7 +34,7 @@ class SignUpViewController: UIViewController {
             displayMessage(userMessage: "Password are not same")
             return
         }
-        
+        /*
         //Creating Activity Indicator
         let myActivityIndicator = UIActivityIndicatorView(style: UIActivityIndicatorView.Style.gray)
         
@@ -49,8 +48,22 @@ class SignUpViewController: UIViewController {
         myActivityIndicator.startAnimating()
         
         view.addSubview(myActivityIndicator)
+        */
         
-        
+        Auth.auth().createUser(withEmail: txtEmail.text!, password: txtPassword.text!){ (user, error) in
+            if error == nil {
+                let sb = UIStoryboard(name: "Main", bundle: nil)
+                let homeVC = sb.instantiateViewController(withIdentifier: "HomeViewController") as! HomeViewController
+                self.present(homeVC, animated: true)
+            }
+            else{
+                let alertController = UIAlertController(title: "Error", message: error?.localizedDescription, preferredStyle: .alert)
+                let defaultAction = UIAlertAction(title: "OK", style: .cancel, handler: nil)
+                
+                alertController.addAction(defaultAction)
+                self.present(alertController, animated: true, completion: nil)
+            }
+        }
         
         
     }

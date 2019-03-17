@@ -7,4 +7,5 @@ target 'Shopping App' do
 
   # Pods for Shopping App
     pod 'Firebase/Core'
+    pod ‘Firebase/Auth’
 end
