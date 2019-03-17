@@ -26,19 +26,43 @@ class SignUpViewController: UIViewController {
     @IBAction func btnSignUpClick(_ sender: Any) {
         if (txtFirstName.text?.isEmpty)! || (txtLastName.text?.isEmpty)! || (txtEmail.text?.isEmpty)! || (txtPassword.text?.isEmpty)! || (txtVerifyPassword.text?.isEmpty)! {
             // Allert User to Enter All Details
+            displayMessage(userMessage: "All field are required to be filled!")
             return
         }
         
         if ((txtPassword.text?.elementsEqual(txtVerifyPassword.text!)) != true){
             // Alert User Passwords are Not same
+            displayMessage(userMessage: "Password are not same")
             return
         }
+        
+        //Creating Activity Indicator
+        let myActivityIndicator = UIActivityIndicatorView(style: UIActivityIndicatorView.Style.gray)
+        
+        //Positioning Activity Indicator in Center of Main view
+        myActivityIndicator.center = view.center
+        
+        //Stop from hiding
+        myActivityIndicator.hidesWhenStopped = false
+        
+        //Start aActivity Indicator
+        myActivityIndicator.startAnimating()
+        
+        view.addSubview(myActivityIndicator)
+        
+        
+        
+        
     }
     
 
+    
+    
     @IBAction func btnCancelClick(_ sender: Any) {
         self.dismiss(animated: true, completion: nil)
     }
+    
+    
     
     func displayMessage(userMessage: String) -> Void {
         DispatchQueue.main.async {

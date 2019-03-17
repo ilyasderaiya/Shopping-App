@@ -15,9 +15,13 @@
 		9B9B31912232065B0041BE8B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9B9B31902232065B0041BE8B /* Assets.xcassets */; };
 		9B9B31942232065B0041BE8B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9B9B31922232065B0041BE8B /* LaunchScreen.storyboard */; };
 		9BD4DE412237091900B11DEA /* transparent cart.png in Resources */ = {isa = PBXBuildFile; fileRef = 9BD4DE402237091900B11DEA /* transparent cart.png */; };
+		C6EBF684223DAE050009F143 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = C6EBF683223DAE040009F143 /* GoogleService-Info.plist */; };
+		DE972959F42BE29E31D876A1 /* Pods_Shopping_App.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 167588636761A6DACD8F5DEE /* Pods_Shopping_App.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		167588636761A6DACD8F5DEE /* Pods_Shopping_App.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Shopping_App.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		26A092D92CF701E7AE9D13CF /* Pods-Shopping App.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Shopping App.release.xcconfig"; path = "Target Support Files/Pods-Shopping App/Pods-Shopping App.release.xcconfig"; sourceTree = "<group>"; };
 		2CA79DE3223C62A600702955 /* SignInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInViewController.swift; sourceTree = "<group>"; };
 		2CA79DE5223C632B00702955 /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
 		2CA79DE7223C643800702955 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
@@ -28,6 +32,8 @@
 		9B9B31932232065B0041BE8B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		9B9B31952232065B0041BE8B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9BD4DE402237091900B11DEA /* transparent cart.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "transparent cart.png"; sourceTree = "<group>"; };
+		A0D5B870111A9D14507321A8 /* Pods-Shopping App.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Shopping App.debug.xcconfig"; path = "Target Support Files/Pods-Shopping App/Pods-Shopping App.debug.xcconfig"; sourceTree = "<group>"; };
+		C6EBF683223DAE040009F143 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -35,17 +41,38 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DE972959F42BE29E31D876A1 /* Pods_Shopping_App.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		20ACF69437B559420F4B27CE /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				167588636761A6DACD8F5DEE /* Pods_Shopping_App.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		6C263A85CFF207AEDDE44359 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				A0D5B870111A9D14507321A8 /* Pods-Shopping App.debug.xcconfig */,
+				26A092D92CF701E7AE9D13CF /* Pods-Shopping App.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
 		9B9B317D2232065A0041BE8B = {
 			isa = PBXGroup;
 			children = (
 				9B9B31882232065A0041BE8B /* Shopping App */,
 				9B9B31872232065A0041BE8B /* Products */,
+				6C263A85CFF207AEDDE44359 /* Pods */,
+				20ACF69437B559420F4B27CE /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -69,6 +96,7 @@
 				9B9B31922232065B0041BE8B /* LaunchScreen.storyboard */,
 				9B9B31952232065B0041BE8B /* Info.plist */,
 				9BD4DE402237091900B11DEA /* transparent cart.png */,
+				C6EBF683223DAE040009F143 /* GoogleService-Info.plist */,
 			);
 			path = "Shopping App";
 			sourceTree = "<group>";
@@ -80,9 +108,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 9B9B31982232065B0041BE8B /* Build configuration list for PBXNativeTarget "Shopping App" */;
 			buildPhases = (
+				40740904F5D1656089C53F40 /* [CP] Check Pods Manifest.lock */,
 				9B9B31822232065A0041BE8B /* Sources */,
 				9B9B31832232065A0041BE8B /* Frameworks */,
 				9B9B31842232065A0041BE8B /* Resources */,
+				D2338EF710F8BC8E1BBFA1E9 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -133,12 +163,62 @@
 			files = (
 				9B9B31942232065B0041BE8B /* LaunchScreen.storyboard in Resources */,
 				9B9B31912232065B0041BE8B /* Assets.xcassets in Resources */,
+				C6EBF684223DAE050009F143 /* GoogleService-Info.plist in Resources */,
 				9B9B318F2232065A0041BE8B /* Main.storyboard in Resources */,
 				9BD4DE412237091900B11DEA /* transparent cart.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		40740904F5D1656089C53F40 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Shopping App-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		D2338EF710F8BC8E1BBFA1E9 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Shopping App/Pods-Shopping App-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/GoogleUtilities/GoogleUtilities.framework",
+				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleUtilities.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Shopping App/Pods-Shopping App-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		9B9B31822232065A0041BE8B /* Sources */ = {
@@ -292,6 +372,7 @@
 		};
 		9B9B31992232065B0041BE8B /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = A0D5B870111A9D14507321A8 /* Pods-Shopping App.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -309,6 +390,7 @@
 		};
 		9B9B319A2232065B0041BE8B /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 26A092D92CF701E7AE9D13CF /* Pods-Shopping App.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
