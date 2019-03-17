@@ -189,6 +189,21 @@
                     <view key="view" contentMode="scaleToFill" id="TkS-xd-RPh">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Pcy-E5-2Ww">
+                                <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                <items>
+                                    <navigationItem title="Home" id="3GU-nx-C5r">
+                                        <barButtonItem key="rightBarButtonItem" title="Log Out" id="bqy-QX-eOO">
+                                            <connections>
+                                                <action selector="btnBarLogOut:" destination="gao-xr-TNa" id="mG0-ju-AeE"/>
+                                            </connections>
+                                        </barButtonItem>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="EkR-VC-HIV"/>
                     </view>

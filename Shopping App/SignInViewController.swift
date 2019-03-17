@@ -21,6 +21,15 @@ class SignInViewController: UIViewController {
         // Do any additional setup after loading the view.
     }
     
+    override func viewDidAppear(_ animated: Bool){
+        super.viewDidAppear(animated)
+        if Auth.auth().currentUser != nil {
+            let sb = UIStoryboard(name: "Main", bundle: nil)
+            let homeVC = sb.instantiateViewController(withIdentifier: "HomeViewController") as! HomeViewController
+            self.present(homeVC, animated: true)
+        }
+    }
+    
     @IBAction func btnSigninClick(_ sender: Any) {
         if (txtEmail.text?.isEmpty)! || (txtPassword.text?.isEmpty)! {
             displayMessage(userMessage: "All field are required to be filled!")
@@ -65,5 +74,6 @@ class SignInViewController: UIViewController {
             self.present(alert, animated: true)
         }
     }
+    
     
 }
