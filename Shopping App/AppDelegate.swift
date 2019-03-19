@@ -8,9 +8,10 @@
 
 import UIKit
 import Firebase
+import GoogleSignIn
 
 @UIApplicationMain
-class AppDelegate: UIResponder, UIApplicationDelegate {
+class AppDelegate: UIResponder, UIApplicationDelegate, GIDSignInDelegate{
 
     var window: UIWindow?
 
@@ -18,8 +19,56 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
         FirebaseApp.configure()
+        
+        GIDSignIn.sharedInstance().clientID = "926286109400-oh3jiriimj6cu9nddkjfhm5m1g0q8j9v.apps.googleusercontent.com"
+        GIDSignIn.sharedInstance().delegate = self
+        
         return true
     }
+    
+    
+    func application(_ app: UIApplication, open url: URL, options: [UIApplication.OpenURLOptionsKey : Any] = [:]) -> Bool {
+        return GIDSignIn.sharedInstance().handle(url as URL?,
+                                                 sourceApplication: options[UIApplication.OpenURLOptionsKey.sourceApplication] as? String,
+                                                 annotation: options[UIApplication.OpenURLOptionsKey.annotation])
+    }
+    
+    
+    
+    
+    
+    
+    // Google Sign In
+    func sign(_ signIn: GIDSignIn!, didSignInFor user: GIDGoogleUser!, withError error: Error!) {
+        if (error) != nil {
+            print("An error occured during Google Authentication")
+            return
+        }
+        
+        guard let authentication = user.authentication else { return }
+        let credential = GoogleAuthProvider.credential(withIDToken: authentication.idToken,
+                                                       accessToken: authentication.accessToken)
+        Auth.auth().signInAndRetrieveData(with: credential) { (user, error) in
+            if (error) != nil {
+                print("Google Authentification Fail")
+            } else {
+                print("Google Authentification Success")
+                
+                
+                let mainStoryBoard: UIStoryboard = UIStoryboard(name:"Main", bundle:nil)
+                let HomePage = mainStoryBoard.instantiateViewController(withIdentifier: "HomeViewController") as! HomeViewController
+                let appDelegate = UIApplication.shared.delegate
+                appDelegate?.window??.rootViewController = HomePage
+ 
+                
+                
+                
+            }
+        }
+    }
+    
+    
+    
 
     func applicationWillResignActive(_ application: UIApplication) {
         // Sent when the application is about to move from active to inactive state. This can occur for certain types of temporary interruptions (such as an incoming phone call or SMS message) or when the user quits the application and it begins the transition to the background state.

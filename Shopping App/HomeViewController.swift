@@ -18,7 +18,20 @@ class HomeViewController: UIViewController {
     }
     
     @IBAction func btnBarLogOut(_ sender: UIBarButtonItem) {
+        
         do {
+            try Auth.auth().signOut()
+            
+            let signInPage = self.storyboard?.instantiateViewController(withIdentifier: "SignInViewController") as! SignInViewController
+            let appDelegate = UIApplication.shared.delegate
+            appDelegate?.window??.rootViewController = signInPage
+            
+        } catch let signOutError as NSError {
+            print ("Error signing out: %@", signOutError)
+        }
+        
+        
+        /*do {
             try Auth.auth().signOut()
         }
         catch let signOutError as NSError {
@@ -28,6 +41,7 @@ class HomeViewController: UIViewController {
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
         let initial = storyboard.instantiateInitialViewController()
         UIApplication.shared.keyWindow?.rootViewController = initial
+ */
     }
     
     
