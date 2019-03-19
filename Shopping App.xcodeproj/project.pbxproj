@@ -10,6 +10,8 @@
 		2CA79DE4223C62A600702955 /* SignInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CA79DE3223C62A600702955 /* SignInViewController.swift */; };
 		2CA79DE6223C632B00702955 /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CA79DE5223C632B00702955 /* SignUpViewController.swift */; };
 		2CA79DE8223C643800702955 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CA79DE7223C643800702955 /* HomeViewController.swift */; };
+		9B2E4A082241A9380010CEEF /* profile.png in Resources */ = {isa = PBXBuildFile; fileRef = 9B2E4A062241A9380010CEEF /* profile.png */; };
+		9B2E4A092241A9380010CEEF /* menu.png in Resources */ = {isa = PBXBuildFile; fileRef = 9B2E4A072241A9380010CEEF /* menu.png */; };
 		9B9B318A2232065A0041BE8B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B9B31892232065A0041BE8B /* AppDelegate.swift */; };
 		9B9B318F2232065A0041BE8B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9B9B318D2232065A0041BE8B /* Main.storyboard */; };
 		9B9B31912232065B0041BE8B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9B9B31902232065B0041BE8B /* Assets.xcassets */; };
@@ -25,6 +27,8 @@
 		2CA79DE3223C62A600702955 /* SignInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInViewController.swift; sourceTree = "<group>"; };
 		2CA79DE5223C632B00702955 /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
 		2CA79DE7223C643800702955 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		9B2E4A062241A9380010CEEF /* profile.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = profile.png; sourceTree = "<group>"; };
+		9B2E4A072241A9380010CEEF /* menu.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = menu.png; sourceTree = "<group>"; };
 		9B9B31862232065A0041BE8B /* Shopping App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Shopping App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		9B9B31892232065A0041BE8B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		9B9B318E2232065A0041BE8B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -65,6 +69,15 @@
 			path = Pods;
 			sourceTree = "<group>";
 		};
+		9B2E4A052241A9260010CEEF /* Images */ = {
+			isa = PBXGroup;
+			children = (
+				9B2E4A072241A9380010CEEF /* menu.png */,
+				9B2E4A062241A9380010CEEF /* profile.png */,
+			);
+			path = Images;
+			sourceTree = "<group>";
+		};
 		9B9B317D2232065A0041BE8B = {
 			isa = PBXGroup;
 			children = (
@@ -86,6 +99,7 @@
 		9B9B31882232065A0041BE8B /* Shopping App */ = {
 			isa = PBXGroup;
 			children = (
+				9B2E4A052241A9260010CEEF /* Images */,
 				9B9B31892232065A0041BE8B /* AppDelegate.swift */,
 				2CA79DE3223C62A600702955 /* SignInViewController.swift */,
 				9B9B318D2232065A0041BE8B /* Main.storyboard */,
@@ -162,8 +176,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				9B9B31942232065B0041BE8B /* LaunchScreen.storyboard in Resources */,
+				9B2E4A082241A9380010CEEF /* profile.png in Resources */,
 				9B9B31912232065B0041BE8B /* Assets.xcassets in Resources */,
 				C6EBF684223DAE050009F143 /* GoogleService-Info.plist in Resources */,
+				9B2E4A092241A9380010CEEF /* menu.png in Resources */,
 				9B9B318F2232065A0041BE8B /* Main.storyboard in Resources */,
 				9BD4DE412237091900B11DEA /* transparent cart.png in Resources */,
 			);

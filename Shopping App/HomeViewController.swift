@@ -11,10 +11,28 @@ import Firebase
 
 class HomeViewController: UIViewController {
 
+    @IBOutlet weak var leadingConstraint: NSLayoutConstraint!
+    var menuIsShown = false
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+    }
+    
+    @IBAction func menuBtnClicked(_ sender: UIBarButtonItem) {
+        if(menuIsShown){
+            leadingConstraint.constant = -200
+            UIView.animate(withDuration: 0.2, delay: 0.0, options: .curveEaseOut, animations: {
+                self.view.layoutIfNeeded()
+            })
+        }
+        else{
+            leadingConstraint.constant=0
+            UIView.animate(withDuration: 0.2, delay: 0.0, options: .curveEaseIn, animations: {
+                self.view.layoutIfNeeded()
+            })
+        }
+        menuIsShown = !menuIsShown
     }
     
     @IBAction func btnBarLogOut(_ sender: UIBarButtonItem) {
