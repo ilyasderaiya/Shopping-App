@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Firebase
 
 class SideMenuViewController: UIViewController {
 
@@ -16,7 +17,30 @@ class SideMenuViewController: UIViewController {
         // Do any additional setup after loading the view.
     }
     
-
+    @IBAction func btnHomeAction(_ sender: UIButton) {
+        let sb=UIStoryboard(name: "Main", bundle: nil)
+        let homeVC=sb.instantiateViewController(withIdentifier: "HomeViewController") as! HomeViewController
+        self.present(homeVC, animated: true)
+    }
+    @IBAction func btnProfileAction(_ sender: UIButton) {
+        let sb=UIStoryboard(name: "Main", bundle: nil)
+        let profileVC=sb.instantiateViewController(withIdentifier: "ProfileVC") as! ProfileViewController
+        self.present(profileVC, animated: true)
+    }
+    
+    @IBAction func btnLogoutAction(_ sender: UIButton) {
+        do {
+            try Auth.auth().signOut()
+            
+            let signInPage = self.storyboard?.instantiateViewController(withIdentifier: "SignInViewController") as! SignInViewController
+            let appDelegate = UIApplication.shared.delegate
+            appDelegate?.window??.rootViewController = signInPage
+            
+        } catch let signOutError as NSError {
+            print ("Error signing out: %@", signOutError)
+        }
+    }
+    
     /*
     // MARK: - Navigation
 

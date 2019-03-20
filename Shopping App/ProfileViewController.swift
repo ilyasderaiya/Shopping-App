@@ -9,7 +9,7 @@
 import UIKit
 
 class ProfileViewController: UIViewController {
-
+    var menuIsShown=false
     @IBOutlet weak var leadingConstraint: NSLayoutConstraint!
     override func viewDidLoad() {
         super.viewDidLoad()

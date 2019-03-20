@@ -35,7 +35,8 @@ class HomeViewController: UIViewController {
         menuIsShown = !menuIsShown
     }
     
-    @IBAction func btnBarLogOut(_ sender: UIBarButtonItem) {
+    
+    /*@IBAction func btnBarLogOut(_ sender: UIBarButtonItem) {
         
         do {
             try Auth.auth().signOut()
@@ -46,7 +47,7 @@ class HomeViewController: UIViewController {
             
         } catch let signOutError as NSError {
             print ("Error signing out: %@", signOutError)
-        }
+        }*/
         
         
         /*do {
@@ -59,8 +60,6 @@ class HomeViewController: UIViewController {
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
         let initial = storyboard.instantiateInitialViewController()
         UIApplication.shared.keyWindow?.rootViewController = initial
- */
-    }
-    
+     }*/
     
 }
