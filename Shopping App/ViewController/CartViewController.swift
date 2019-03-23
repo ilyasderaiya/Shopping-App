@@ -44,19 +44,25 @@ class CartViewController: BaseViewController, UITableViewDelegate,UITableViewDat
         
     }
     
+    
+    @IBAction func btnCheckoutClick(_ sender: UIButton) {
+        if m.SCArray.count == 0 {
+            //Alert For adding Something to Cart
+            return
+        }else{
+            let sb = UIStoryboard(name: "Main", bundle: nil)
+            let checkoutVC = sb.instantiateViewController(withIdentifier: "CheckoutViewController") as! CheckoutViewController
+            self.navigationController?.pushViewController(checkoutVC, animated: false)
+        }
+        
+    }
+    
+    
     /*func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 300
     }*/
     
 
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
+    
 
 }

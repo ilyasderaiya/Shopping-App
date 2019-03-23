@@ -42,6 +42,7 @@
 		C612E9E122462119009EF678 /* Oneplus.png in Resources */ = {isa = PBXBuildFile; fileRef = C612E9DC22462118009EF678 /* Oneplus.png */; };
 		C612E9E222462119009EF678 /* Xs-Max.png in Resources */ = {isa = PBXBuildFile; fileRef = C612E9DD22462119009EF678 /* Xs-Max.png */; };
 		C612E9E822468704009EF678 /* cart.png in Resources */ = {isa = PBXBuildFile; fileRef = C612E9E722468704009EF678 /* cart.png */; };
+		C612E9EA22469568009EF678 /* CheckoutTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C612E9E922469568009EF678 /* CheckoutTableViewCell.swift */; };
 		C6EBF684223DAE050009F143 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = C6EBF683223DAE040009F143 /* GoogleService-Info.plist */; };
 		DE972959F42BE29E31D876A1 /* Pods_Shopping_App.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 167588636761A6DACD8F5DEE /* Pods_Shopping_App.framework */; };
 /* End PBXBuildFile section */
@@ -87,6 +88,7 @@
 		C612E9DC22462118009EF678 /* Oneplus.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Oneplus.png; sourceTree = "<group>"; };
 		C612E9DD22462119009EF678 /* Xs-Max.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Xs-Max.png"; sourceTree = "<group>"; };
 		C612E9E722468704009EF678 /* cart.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = cart.png; sourceTree = "<group>"; };
+		C612E9E922469568009EF678 /* CheckoutTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckoutTableViewCell.swift; sourceTree = "<group>"; };
 		C6EBF683223DAE040009F143 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -202,6 +204,7 @@
 				C612E9D32245B9BD009EF678 /* Products.swift */,
 				C612E9D52245CF0F009EF678 /* CartItemTableViewCell.swift */,
 				2CA426F82244477D0012BC57 /* ProductCollectionViewCell.swift */,
+				C612E9E922469568009EF678 /* CheckoutTableViewCell.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -405,6 +408,7 @@
 				2CA426F92244477D0012BC57 /* ProductCollectionViewCell.swift in Sources */,
 				C612E9C322456962009EF678 /* BaseViewController.swift in Sources */,
 				9B9B318A2232065A0041BE8B /* AppDelegate.swift in Sources */,
+				C612E9EA22469568009EF678 /* CheckoutTableViewCell.swift in Sources */,
 				C612E9C822458DC0009EF678 /* CartViewController.swift in Sources */,
 				2CA79DE6223C632B00702955 /* SignUpViewController.swift in Sources */,
 				2CA426FD224451B50012BC57 /* ProductViewController.swift in Sources */,
