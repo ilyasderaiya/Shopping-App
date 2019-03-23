@@ -15,17 +15,28 @@ class SignInViewController: UIViewController, GIDSignInUIDelegate {
     @IBOutlet weak var txtEmail: UITextField!
     @IBOutlet weak var txtPassword: UITextField!
     
+   
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        //let userDefault=UserDefaults.standard
+        Model.sharedModel.addVal()
         //GIDSignIn.sharedInstance().delegate = self
         GIDSignIn.sharedInstance().uiDelegate = self
         configureGoogleSignInButton()
     }
     
-    
-    
+    //To Check Wether user is still Signed-In
+    override func viewDidAppear(_ animated: Bool){
+        super.viewDidAppear(animated)
+        if Auth.auth().currentUser != nil {
+            let sb = UIStoryboard(name: "Main", bundle: nil)
+            let homeVC = sb.instantiateViewController(withIdentifier: "HomeViewController") as! HomeViewController
+            //self.present(homeVC, animated: true)
+            //homeVC.m=m
+            self.navigationController?.pushViewController(homeVC, animated: true)
+        }
+    }
     
     //creating the Google sign in button
     fileprivate func configureGoogleSignInButton() {
@@ -35,14 +46,6 @@ class SignInViewController: UIViewController, GIDSignInUIDelegate {
         GIDSignIn.sharedInstance().uiDelegate = self
     }
     
-    override func viewDidAppear(_ animated: Bool){
-        super.viewDidAppear(animated)
-        if Auth.auth().currentUser != nil {
-            let sb = UIStoryboard(name: "Main", bundle: nil)
-            let homeVC = sb.instantiateViewController(withIdentifier: "HomeViewController") as! HomeViewController
-            self.present(homeVC, animated: true)
-        }
-    }
     
     @IBAction func btnSigninClick(_ sender: Any) {
         if (txtEmail.text?.isEmpty)! || (txtPassword.text?.isEmpty)! {
@@ -53,7 +56,8 @@ class SignInViewController: UIViewController, GIDSignInUIDelegate {
             if error == nil{
                 let sb = UIStoryboard(name: "Main", bundle: nil)
                 let homeVC = sb.instantiateViewController(withIdentifier: "HomeViewController") as! HomeViewController
-                self.present(homeVC, animated: true)
+                //self.present(homeVC, animated: true)
+                self.navigationController?.pushViewController(homeVC, animated: true)
             }
             else{
                 let alertController = UIAlertController(title: "Error", message: error?.localizedDescription, preferredStyle: .alert)
