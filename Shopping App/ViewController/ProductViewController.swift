@@ -35,6 +35,8 @@ class ProductViewController: BaseViewController {
         addSlideMenuButton()
         addCartButton()
         
+        self.navigationItem.title = "Product"
+        
         // Do any additional setup after loading the view.
     }
     

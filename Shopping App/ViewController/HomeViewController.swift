@@ -20,6 +20,7 @@ class HomeViewController: BaseViewController, UICollectionViewDelegate, UICollec
     override func viewDidLoad() {
         super.viewDidLoad()
         addSlideMenuButton()
+        addCartButton()
        // let userDefault=UserDefaults.standard
        // m=(userDefault.data(forKey: "model") as! NSObject) as! Model
         //print("Inside home\n")

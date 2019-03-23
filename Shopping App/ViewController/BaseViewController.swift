@@ -57,8 +57,12 @@ class BaseViewController: UIViewController, SlideMenuDelegate {
     }
     
     func  addCartButton(){
-        let btnCart = UIButton(type: UIButton.ButtonType.system)
-        btnCart.setTitle("Cart", for: UIControl.State())
+       
+        let btnCart = UIButton(type: UIButton.ButtonType.custom)
+        btnCart.setImage(UIImage(named: "cart"), for: .normal)
+        //btnCart.setTitle("Cart", for: UIControl.State())
+        btnCart.frame = CGRect(x: 0, y: 0, width: 30, height: 30)
+        
         btnCart.addTarget(self, action: #selector(BaseViewController.onCartClick(_:)), for: UIControl.Event.touchUpInside)
         let cartBarButton = UIBarButtonItem(customView: btnCart)
         self.navigationItem.rightBarButtonItem = cartBarButton;
