@@ -54,7 +54,8 @@ class SignUpViewController: UIViewController {
             if error == nil {
                 let sb = UIStoryboard(name: "Main", bundle: nil)
                 let homeVC = sb.instantiateViewController(withIdentifier: "HomeViewController") as! HomeViewController
-                self.present(homeVC, animated: true)
+                //self.present(homeVC, animated: true)
+                self.navigationController?.pushViewController(homeVC, animated: true)
             }
             else{
                 let alertController = UIAlertController(title: "Error", message: error?.localizedDescription, preferredStyle: .alert)
