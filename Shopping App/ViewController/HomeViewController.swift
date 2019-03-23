@@ -9,19 +9,26 @@
 import UIKit
 import Firebase
 
-class HomeViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource {
+class HomeViewController: BaseViewController, UICollectionViewDelegate, UICollectionViewDataSource {
+    
+    var m = Model.sharedModel
+    //var m : Model?
     var PrName=["Samsung Galaxy S7", "Iphone 8"]
     @IBOutlet weak var ProductCollectionView: UICollectionView!
     @IBOutlet weak var leadingConstraint: NSLayoutConstraint!
     var menuIsShown = false
     override func viewDidLoad() {
         super.viewDidLoad()
+        addSlideMenuButton()
+       // let userDefault=UserDefaults.standard
+       // m=(userDefault.data(forKey: "model") as! NSObject) as! Model
+        //print("Inside home\n")
         self.ProductCollectionView.delegate=self
         self.ProductCollectionView.dataSource=self
 
         // Do any additional setup after loading the view.
     }
-    
+    /*
     @IBAction func menuBtnClicked(_ sender: UIBarButtonItem) {
         if(menuIsShown){
             leadingConstraint.constant = -200
@@ -36,26 +43,31 @@ class HomeViewController: UIViewController, UICollectionViewDelegate, UICollecti
             })
         }
         menuIsShown = !menuIsShown
-    }
+    }*/
+ 
+ 
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return PrName.count
+        return m.p.count
     }
     
     
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell=collectionView.dequeueReusableCell(withReuseIdentifier: "ProductCell", for: indexPath) as! ProductCollectionViewCell
-        print(PrName[indexPath.row])
-        cell.imgVwProduct.image=UIImage(named: "S7")
-        cell.lblProductName.text=PrName[indexPath.row]
+        print(m.p[indexPath.row].productName)
+        cell.imgVwProduct.image=UIImage(named: m.p[indexPath.row].productImageName)
+        cell.lblProductName.text=m.p[indexPath.row].productName//PrName[indexPath.row]
         return cell
     }
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         let sb=UIStoryboard(name: "Main", bundle: nil)
         let productVC=sb.instantiateViewController(withIdentifier: "ProductVC") as! ProductViewController
-        productVC.img=UIImage(named: "S7")!
-        productVC.PrName=PrName[indexPath.row]
-        self.present(productVC, animated: true)
+        //productVC.img=UIImage(named: "S7")!
+        //productVC.PrName=PrName[indexPath.row]
+        productVC.pObj=m.p[indexPath.row]
+        //productVC.m=m
+        //self.present(productVC, animated: true)
+        self.navigationController?.pushViewController(productVC, animated: false)
     }
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         return CGSize(width: 150, height: 200)

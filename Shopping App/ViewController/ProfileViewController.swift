@@ -8,15 +8,16 @@
 
 import UIKit
 
-class ProfileViewController: UIViewController {
+class ProfileViewController: BaseViewController {
     var menuIsShown=false
     @IBOutlet weak var leadingConstraint: NSLayoutConstraint!
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        addSlideMenuButton()
         // Do any additional setup after loading the view.
     }
     
+    /*
     @IBAction func menuBtnClicked(_ sender: UIBarButtonItem) {
         if(menuIsShown){
             leadingConstraint.constant = -200
@@ -31,7 +32,7 @@ class ProfileViewController: UIViewController {
             })
         }
         menuIsShown = !menuIsShown
-    }
+    }*/
     
     /*
     // MARK: - Navigation

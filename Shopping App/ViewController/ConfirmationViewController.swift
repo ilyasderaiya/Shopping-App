@@ -1,24 +1,18 @@
 //
-//  ProductViewController.swift
+//  ConfirmationViewController.swift
 //  Shopping App
 //
-//  Created by Akhil James Joseph on 2019-03-21.
+//  Created by Ilyas Deraiya on 2019-03-22.
 //  Copyright © 2019 Ilyas. All rights reserved.
 //
 
 import UIKit
 
-class ProductViewController: UIViewController {
-    var PrName=String()
-    var img=UIImage()
-    
-    @IBOutlet weak var imgVwProduct: UIImageView!
-    @IBOutlet weak var lblProductName: UILabel!
-    
+class ConfirmationViewController: UIViewController {
+
     override func viewDidLoad() {
         super.viewDidLoad()
-        lblProductName.text=PrName
-        imgVwProduct.image=img
+
         // Do any additional setup after loading the view.
     }
     
