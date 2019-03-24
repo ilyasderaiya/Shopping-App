@@ -13,7 +13,6 @@ class HomeViewController: BaseViewController, UICollectionViewDelegate, UICollec
     
     var m = Model.sharedModel
     //var m : Model?
-    var PrName=["Samsung Galaxy S7", "Iphone 8"]
     @IBOutlet weak var ProductCollectionView: UICollectionView!
     @IBOutlet weak var leadingConstraint: NSLayoutConstraint!
     var menuIsShown = false

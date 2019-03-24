@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.64" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="AIx-0m-4lO">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="AIx-0m-4lO">
     <device id="retina6_1" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.47"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -211,7 +211,7 @@
                             <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="CAv-TK-EXZ">
                                 <rect key="frame" x="-200" y="88" width="200" height="808"/>
                             </containerView>
-                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="IKQ-Ok-7xE">
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="IKQ-Ok-7xE">
                                 <rect key="frame" x="20" y="97" width="374" height="765"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="jvs-tS-pH5">
@@ -228,11 +228,11 @@
                                             <rect key="frame" x="0.0" y="0.0" width="150" height="199"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" adjustsImageSizeForAccessibilityContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="r5T-R4-8lN">
-                                                    <rect key="frame" x="0.0" y="0.0" width="150" height="150"/>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" adjustsImageSizeForAccessibilityContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="r5T-R4-8lN">
+                                                    <rect key="frame" x="0.0" y="0.0" width="150" height="134"/>
                                                 </imageView>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Label" textAlignment="center" lineBreakMode="wordWrap" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4KN-ZY-u5H">
-                                                    <rect key="frame" x="0.0" y="159" width="150" height="41"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="wordWrap" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4KN-ZY-u5H">
+                                                    <rect key="frame" x="0.0" y="143" width="150" height="41"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="41" id="DMv-8M-G8X"/>
                                                     </constraints>
@@ -243,6 +243,7 @@
                                             </subviews>
                                         </view>
                                         <constraints>
+                                            <constraint firstAttribute="bottomMargin" secondItem="4KN-ZY-u5H" secondAttribute="bottom" constant="7" id="0qI-yA-2Ow"/>
                                             <constraint firstAttribute="trailing" secondItem="r5T-R4-8lN" secondAttribute="trailing" id="1E6-cH-w66"/>
                                             <constraint firstItem="r5T-R4-8lN" firstAttribute="trailing" secondItem="4KN-ZY-u5H" secondAttribute="trailing" id="Jl3-g7-EKy"/>
                                             <constraint firstAttribute="bottomMargin" secondItem="4KN-ZY-u5H" secondAttribute="bottom" constant="-1" id="QkP-85-0dl"/>
@@ -262,11 +263,13 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="IKQ-Ok-7xE" firstAttribute="leading" secondItem="CAv-TK-EXZ" secondAttribute="trailing" constant="20" id="4Au-aR-zaa"/>
-                            <constraint firstItem="IKQ-Ok-7xE" firstAttribute="leading" secondItem="TkS-xd-RPh" secondAttribute="leadingMargin" id="JqM-BW-Jnx"/>
+                            <constraint firstItem="IKQ-Ok-7xE" firstAttribute="trailing" secondItem="TkS-xd-RPh" secondAttribute="trailingMargin" id="9nc-Ec-UhB"/>
                             <constraint firstItem="CAv-TK-EXZ" firstAttribute="leading" secondItem="TkS-xd-RPh" secondAttribute="leading" constant="-200" id="K3n-RF-WXE"/>
                             <constraint firstItem="CAv-TK-EXZ" firstAttribute="top" secondItem="TkS-xd-RPh" secondAttribute="topMargin" constant="44" id="OXd-lE-lc7"/>
-                            <constraint firstItem="IKQ-Ok-7xE" firstAttribute="bottom" secondItem="EkR-VC-HIV" secondAttribute="bottom" id="hOY-Ut-SbR"/>
+                            <constraint firstItem="IKQ-Ok-7xE" firstAttribute="bottom" secondItem="EkR-VC-HIV" secondAttribute="bottom" id="VFn-mr-GZh"/>
+                            <constraint firstItem="IKQ-Ok-7xE" firstAttribute="leading" secondItem="TkS-xd-RPh" secondAttribute="leadingMargin" id="ZRe-hZ-Nel"/>
+                            <constraint firstItem="IKQ-Ok-7xE" firstAttribute="top" secondItem="EkR-VC-HIV" secondAttribute="top" constant="53" id="pyL-BN-owe"/>
+                            <constraint firstItem="IKQ-Ok-7xE" firstAttribute="leading" secondItem="CAv-TK-EXZ" secondAttribute="trailing" constant="20" id="tzX-bb-x3Z"/>
                             <constraint firstAttribute="bottom" secondItem="CAv-TK-EXZ" secondAttribute="bottom" id="uW9-Dn-Ivu"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="EkR-VC-HIV"/>
@@ -534,8 +537,8 @@
                                         <color key="textColor" red="0.29411764709999999" green="0.2274509804" blue="0.51764705879999995" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="$0.00" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Gwz-jq-gDE">
-                                        <rect key="frame" x="220" y="33" width="178" height="63"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="$0.00" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Gwz-jq-gDE">
+                                        <rect key="frame" x="181" y="33" width="217" height="63"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <fontDescription key="fontDescription" name="Avenir-Light" family="Avenir" pointSize="46"/>
                                         <nil key="textColor"/>
@@ -768,7 +771,6 @@
                                         </state>
                                         <connections>
                                             <action selector="btnPayNowClick:" destination="GAl-Ks-JwB" eventType="touchUpInside" id="H9q-nE-mQC"/>
-                                            <action selector="payNow:" destination="GAl-Ks-JwB" eventType="touchUpInside" id="URU-gO-Mkr"/>
                                         </connections>
                                     </button>
                                     <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="eYN-4b-CIP">
@@ -780,7 +782,7 @@
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                 <prototypes>
-                                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" rowHeight="47" id="ypF-Bm-WPc">
+                                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="CheckoutTableViewCell" rowHeight="47" id="ypF-Bm-WPc" customClass="CheckoutTableViewCell" customModule="Shopping_App" customModuleProvider="target">
                                                         <rect key="frame" x="0.0" y="28" width="414" height="47"/>
                                                         <autoresizingMask key="autoresizingMask"/>
                                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="ypF-Bm-WPc" id="xLD-fu-zxx">
@@ -803,6 +805,10 @@
                                                                 </label>
                                                             </subviews>
                                                         </tableViewCellContentView>
+                                                        <connections>
+                                                            <outlet property="lblProductPrice" destination="0y4-hx-Ljf" id="l72-l7-T4m"/>
+                                                            <outlet property="lblProductTitle" destination="PpG-zE-aVE" id="Y2i-VA-p3H"/>
+                                                        </connections>
                                                     </tableViewCell>
                                                 </prototypes>
                                             </tableView>
@@ -813,8 +819,8 @@
                                                 <color key="textColor" red="0.29411764709999999" green="0.2274509804" blue="0.51764705879999995" alpha="1" colorSpace="calibratedRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="$0.00" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UCc-W2-RPy">
-                                                <rect key="frame" x="290" y="218" width="108" height="63"/>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="$0.00" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UCc-W2-RPy">
+                                                <rect key="frame" x="192" y="218" width="206" height="63"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 <fontDescription key="fontDescription" name="Avenir-Light" family="Avenir" pointSize="46"/>
                                                 <nil key="textColor"/>
@@ -833,12 +839,8 @@
                     <toolbarItems/>
                     <navigationItem key="navigationItem" title="CHECKOUT" id="lCF-56-gFh"/>
                     <connections>
-                        <outlet property="cardCvv" destination="89i-BS-PJx" id="lTp-No-lBQ"/>
-                        <outlet property="cardExpiryMonth" destination="gI1-II-6l2" id="JYJ-Eo-881"/>
-                        <outlet property="cardExpiryYear" destination="LP3-7n-7gy" id="Obm-z8-NDf"/>
-                        <outlet property="cardNumber" destination="I75-S4-uzX" id="1Ik-mA-kqK"/>
-                        <outlet property="labelTotalPrice" destination="UCc-W2-RPy" id="KXH-er-YCB"/>
-                        <outlet property="tableViewOrderDetails" destination="7Mq-N9-b2x" id="Vcm-Re-Xit"/>
+                        <outlet property="lblTotal" destination="UCc-W2-RPy" id="BDe-cw-TLg"/>
+                        <outlet property="tblVwOrderDetails" destination="7Mq-N9-b2x" id="N0P-H1-892"/>
                         <outlet property="txtAppartment" destination="qiI-Mm-u4w" id="v5N-cY-SCq"/>
                         <outlet property="txtCardNumber" destination="I75-S4-uzX" id="uny-aE-SjN"/>
                         <outlet property="txtCity" destination="SMX-Tz-DwV" id="i0b-6Z-e9g"/>
@@ -907,7 +909,7 @@
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Postcode and State" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NCe-qk-FLo">
-                                                <rect key="frame" x="101" y="139" width="209" height="26"/>
+                                                <rect key="frame" x="102" y="139" width="209" height="26"/>
                                                 <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="19"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
@@ -939,6 +941,9 @@
                                         <state key="normal" title="KEEP SHOPPING">
                                             <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                         </state>
+                                        <connections>
+                                            <action selector="btnKeepShoppingAction:" destination="3uL-hY-gJT" eventType="touchUpInside" id="GKy-zS-CFe"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <constraints>
@@ -972,9 +977,9 @@
                     <toolbarItems/>
                     <navigationItem key="navigationItem" title="CONFIRMATION" id="t1p-R5-Gxx"/>
                     <connections>
-                        <outlet property="postcode" destination="NCe-qk-FLo" id="3r1-Uc-agN"/>
-                        <outlet property="streetName" destination="rjc-WD-T0x" id="foA-0I-AnZ"/>
-                        <outlet property="suburb" destination="meh-th-9bg" id="a6f-Sz-tQa"/>
+                        <outlet property="lblPostCodeState" destination="NCe-qk-FLo" id="9u8-at-y2i"/>
+                        <outlet property="lblStreetName" destination="rjc-WD-T0x" id="R3W-4s-hDF"/>
+                        <outlet property="lblSuburb" destination="meh-th-9bg" id="KJQ-cp-BMs"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="9T1-Gj-wCg" sceneMemberID="firstResponder"/>
@@ -986,7 +991,7 @@
         <image name="City road.jpg" width="1440" height="2560"/>
         <image name="Milky way galaxy.jpg" width="1440" height="2560"/>
         <image name="delivery.png" width="16" height="16"/>
-        <image name="home.png" width="18.75" height="18.75"/>
-        <image name="profile.png" width="18.75" height="18.75"/>
+        <image name="home.png" width="25" height="25"/>
+        <image name="profile.png" width="25" height="25"/>
     </resources>
 </document>

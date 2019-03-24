@@ -43,7 +43,7 @@ class ProductViewController: BaseViewController {
     @IBAction func stepperQtyAction(_ sender: UIStepper) {
         lblProdQty.text = "\(sender.value)"
         qty = Int(sender.value)
-        lblPrice.text="\(Double(qty) * pObj!.productPrice)"
+        lblPrice.text="$\(Double(qty) * pObj!.productPrice)"
     }
     
    /* override func onCartClick(_ sender: UIBarButtonItem) {

@@ -9,14 +9,30 @@
 import UIKit
 
 class ConfirmationViewController: UIViewController {
-
+    var m=Model.sharedModel
+    
+    @IBOutlet weak var lblStreetName: UILabel!
+    @IBOutlet weak var lblSuburb: UILabel!
+    @IBOutlet weak var lblPostCodeState: UILabel!
+    
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        let info=m.cardship
+        lblStreetName.text="\(info.appartment), \(info.street)"
+        lblSuburb.text=info.city
+        lblPostCodeState.text="\(info.postalCode), \(info.province)"
         // Do any additional setup after loading the view.
     }
     
-
+    @IBAction func btnKeepShoppingAction(_ sender: UIButton) {
+        m.SCArray.removeAll()
+        let sb=UIStoryboard(name: "Main", bundle: nil)
+        let homeVC=sb.instantiateViewController(withIdentifier: "HomeViewController") as! HomeViewController
+        self.navigationController?.pushViewController(homeVC, animated: true)
+    }
+    
     /*
     // MARK: - Navigation
 

@@ -10,6 +10,8 @@ import UIKit
 
 class CheckoutTableViewCell: UITableViewCell {
 
+    @IBOutlet weak var lblProductTitle: UILabel!
+    @IBOutlet weak var lblProductPrice: UILabel!
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code

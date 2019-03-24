@@ -37,9 +37,9 @@ class CartViewController: BaseViewController, UITableViewDelegate,UITableViewDat
         print("name:\(scItem.productName)")
         cell.lblItemName.text=scItem.productName
         cell.lblItemQty.text="Quantity:\(scItem.quantity)"
-        cell.lblItemPrice.text=String(scItem.price)
+        cell.lblItemPrice.text="$\(scItem.price)"
         total += scItem.price
-        lblItemTotal.text=String(total)
+        lblItemTotal.text="$\(total)"
         return cell
         
     }
@@ -53,6 +53,12 @@ class CartViewController: BaseViewController, UITableViewDelegate,UITableViewDat
             let sb = UIStoryboard(name: "Main", bundle: nil)
             let checkoutVC = sb.instantiateViewController(withIdentifier: "CheckoutViewController") as! CheckoutViewController
             self.navigationController?.pushViewController(checkoutVC, animated: false)
+            let id=String()
+            var tempOrder=Orders(orderId: id.randomStringWithLength(len: 5))
+            for i in m.SCArray{
+                tempOrder.orderDetList.append(OrderDetails(productID: i.productId, productName: i.productName, quantity: i.quantity, total: i.price))
+            }
+            m.orderList.append(tempOrder)
         }
         
     }
