@@ -57,6 +57,19 @@ class BaseViewController: UIViewController, SlideMenuDelegate {
         }
     }
     
+    func addContact(){
+        let btnContact = UIButton(type: UIButton.ButtonType.custom)
+        //btnCart.setImage(UIImage(named: "cart"), for: .normal)
+        btnContact.setTitle("Contact Us", for: UIControl.State.normal)
+        //btnContact.frame = CGRect(x: 0, y: 0, width: 30, height: 30)
+        btnContact.setTitleColor(UIColor .black, for: UIControl.State())
+        btnContact.addTarget(self, action: #selector(AboutViewController.launchAlert), for: UIControl.Event.touchUpInside)
+        let contactBarButton = UIBarButtonItem(customView: btnContact)
+        self.navigationItem.rightBarButtonItem = contactBarButton;
+        
+    }
+    
+    
     func  addCartButton(){
        
         let btnCart = UIButton(type: UIButton.ButtonType.custom)

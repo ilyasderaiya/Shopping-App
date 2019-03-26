@@ -61,7 +61,7 @@ class ProductViewController: BaseViewController {
         let alert=UIAlertController(title: "Success", message: "Product added to cart", preferredStyle: .alert)
         alert.addAction(UIAlertAction(title: "OK", style: .default, handler: .none))
         print(qty)
-        //self.present(alert, animated: false)
+        self.present(alert, animated: false)
     }
     
     @IBAction func barBtnCartAction(_ sender: UIBarButtonItem) {

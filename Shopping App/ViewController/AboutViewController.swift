@@ -16,8 +16,13 @@ class AboutViewController: BaseViewController, WKNavigationDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.navigationItem.title = "About-Us"
-        self.navigationItem.rightBarButtonItem(UIBarButtonItem(title: "Contact US", style: UIBarButtonItem.Style.plain, target: self, action: #selector(AboutViewController.launchAlert)))
-        addCartButton()
+        
+        /*let contactUs = UIButton(type: .custom)
+        contactUs.setTitle("Contact-Us", for: UIControl.State())
+        let btnContact = UIBarButtonItem(customView: contactUs)
+        self.navigationItem.rightBarButtonItem(btnContact)*/
+        //addCartButton()
+        addContact()
         addSlideMenuButton()
         wkAbout.navigationDelegate = self
         loadHtml()
@@ -29,7 +34,7 @@ class AboutViewController: BaseViewController, WKNavigationDelegate {
         let myReq = URLRequest(url: localFilePath!)
         wkAbout.load(myReq)
     }
-    func launchAlert(){
+    @objc func launchAlert(){
         let contactInfo="email:\nemilabrahamz@gmail.com\nsrinathsuddala@gmail.com\nilyasderaiya@gmail.com"
         let alert = UIAlertController(title: "Contact US", message:contactInfo, preferredStyle: .alert)
         let okbutton = UIAlertAction(title: "OK", style: .default, handler: nil)
