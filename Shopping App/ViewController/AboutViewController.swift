@@ -7,26 +7,28 @@
 //
 
 import UIKit
+import WebKit
 
-class AboutViewController: BaseViewController {
+class AboutViewController: BaseViewController, WKNavigationDelegate {
 
+    @IBOutlet weak var wkAbout: WKWebView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         self.navigationItem.title = "About-Us"
         addCartButton()
         addSlideMenuButton()
-        // Do any additional setup after loading the view.
+        
+        
+        wkAbout.navigationDelegate = self
+        loadHtml()
     }
     
 
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    func loadHtml(){
+        let localFilePath = Bundle.main.url(forResource: "About", withExtension: "html")
+        let myReq = URLRequest(url: localFilePath!)
+        wkAbout.load(myReq)
     }
-    */
 
 }

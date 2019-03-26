@@ -734,7 +734,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LMk-jJ-IMv">
-                                        <rect key="frame" x="0.0" y="28" width="283" height="56"/>
+                                        <rect key="frame" x="0.0" y="35" width="283" height="49"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                                         <state key="normal" title="Home" image="home.png">
@@ -818,6 +818,9 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="QeA-BX-bk3"/>
                     </view>
+                    <connections>
+                        <outlet property="wkAbout" destination="4Zs-uB-pKn" id="S5y-Tc-jmO"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="79c-ih-Xkv" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

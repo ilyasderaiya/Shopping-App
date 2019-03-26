@@ -24,6 +24,8 @@
 		713851382249D46500815D44 /* Customers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 713851372249D46500815D44 /* Customers.swift */; };
 		7138513A2249D8F800815D44 /* EditProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 713851392249D8F800815D44 /* EditProfileViewController.swift */; };
 		7138513C2249DF8400815D44 /* AboutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7138513B2249DF8400815D44 /* AboutViewController.swift */; };
+		71E07109224A798900197175 /* About.html in Resources */ = {isa = PBXBuildFile; fileRef = 71E07108224A798900197175 /* About.html */; };
+		71E0710B224A7C1E00197175 /* About Cart.png in Resources */ = {isa = PBXBuildFile; fileRef = 71E0710A224A7C1E00197175 /* About Cart.png */; };
 		9B2E4A082241A9380010CEEF /* profile.png in Resources */ = {isa = PBXBuildFile; fileRef = 9B2E4A062241A9380010CEEF /* profile.png */; };
 		9B2E4A092241A9380010CEEF /* menu.png in Resources */ = {isa = PBXBuildFile; fileRef = 9B2E4A072241A9380010CEEF /* menu.png */; };
 		9B2E4A0D2241AEB70010CEEF /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B2E4A0C2241AEB70010CEEF /* ProfileViewController.swift */; };
@@ -77,6 +79,8 @@
 		713851372249D46500815D44 /* Customers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Customers.swift; sourceTree = "<group>"; };
 		713851392249D8F800815D44 /* EditProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditProfileViewController.swift; sourceTree = "<group>"; };
 		7138513B2249DF8400815D44 /* AboutViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutViewController.swift; sourceTree = "<group>"; };
+		71E07108224A798900197175 /* About.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = About.html; sourceTree = "<group>"; };
+		71E0710A224A7C1E00197175 /* About Cart.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "About Cart.png"; sourceTree = "<group>"; };
 		9B2E4A062241A9380010CEEF /* profile.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = profile.png; sourceTree = "<group>"; };
 		9B2E4A072241A9380010CEEF /* menu.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = menu.png; sourceTree = "<group>"; };
 		9B2E4A0C2241AEB70010CEEF /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
@@ -144,6 +148,7 @@
 		9B2E4A052241A9260010CEEF /* Images */ = {
 			isa = PBXGroup;
 			children = (
+				71E0710A224A7C1E00197175 /* About Cart.png */,
 				713851352249CB5E00815D44 /* huawei p20 pro.png */,
 				713851332249CAF000815D44 /* honor view 20.png */,
 				C612E9E722468704009EF678 /* cart.png */,
@@ -197,6 +202,7 @@
 				9B9B31902232065B0041BE8B /* Assets.xcassets */,
 				9B9B31922232065B0041BE8B /* LaunchScreen.storyboard */,
 				9B9B31952232065B0041BE8B /* Info.plist */,
+				71E07108224A798900197175 /* About.html */,
 			);
 			path = "Shopping App";
 			sourceTree = "<group>";
@@ -332,6 +338,7 @@
 				C612E9B9224547A2009EF678 /* First light.jpg in Resources */,
 				C6EBF684223DAE050009F143 /* GoogleService-Info.plist in Resources */,
 				7111B5632241BB42002A698A /* home.png in Resources */,
+				71E0710B224A7C1E00197175 /* About Cart.png in Resources */,
 				9B2E4A092241A9380010CEEF /* menu.png in Resources */,
 				C612E9B522454046009EF678 /* Long road.jpg in Resources */,
 				C612E9E122462119009EF678 /* Oneplus.png in Resources */,
@@ -343,6 +350,7 @@
 				C612E9DF22462119009EF678 /* Pixel3.png in Resources */,
 				C612E9BB224547A2009EF678 /* City road.jpg in Resources */,
 				2CA426FB224449D20012BC57 /* S7.png in Resources */,
+				71E07109224A798900197175 /* About.html in Resources */,
 				713851342249CAF000815D44 /* honor view 20.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
