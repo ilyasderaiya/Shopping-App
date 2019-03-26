@@ -87,6 +87,12 @@ class MenuViewController: UIViewController {
         
     }
     
+    @IBAction func btnMyOrdersAction(_ sender: UIButton) {
+        let sb = UIStoryboard(name: "Main", bundle: nil)
+        let orderVC = sb.instantiateViewController(withIdentifier: "OrderTableViewController") as! OrderTableViewController
+        self.navigationController?.pushViewController(orderVC, animated: true)
+    }
+    
 
     /*
     // MARK: - Navigation

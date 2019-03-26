@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2C3CF488224A96B30017BDB0 /* OrderTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C3CF487224A96B30017BDB0 /* OrderTableViewController.swift */; };
+		2C3CF48C224A98F30017BDB0 /* OrderTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C3CF48B224A98F30017BDB0 /* OrderTableViewCell.swift */; };
+		2C3CF48E224A9C2F0017BDB0 /* OrderDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C3CF48D224A9C2F0017BDB0 /* OrderDetailsViewController.swift */; };
 		2CA426F92244477D0012BC57 /* ProductCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CA426F82244477D0012BC57 /* ProductCollectionViewCell.swift */; };
 		2CA426FB224449D20012BC57 /* S7.png in Resources */ = {isa = PBXBuildFile; fileRef = 2CA426FA224449D10012BC57 /* S7.png */; };
 		2CA426FD224451B50012BC57 /* ProductViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CA426FC224451B50012BC57 /* ProductViewController.swift */; };
@@ -62,6 +65,9 @@
 /* Begin PBXFileReference section */
 		167588636761A6DACD8F5DEE /* Pods_Shopping_App.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Shopping_App.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		26A092D92CF701E7AE9D13CF /* Pods-Shopping App.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Shopping App.release.xcconfig"; path = "Target Support Files/Pods-Shopping App/Pods-Shopping App.release.xcconfig"; sourceTree = "<group>"; };
+		2C3CF487224A96B30017BDB0 /* OrderTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderTableViewController.swift; sourceTree = "<group>"; };
+		2C3CF48B224A98F30017BDB0 /* OrderTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderTableViewCell.swift; sourceTree = "<group>"; };
+		2C3CF48D224A9C2F0017BDB0 /* OrderDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderDetailsViewController.swift; sourceTree = "<group>"; };
 		2CA426F82244477D0012BC57 /* ProductCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductCollectionViewCell.swift; sourceTree = "<group>"; };
 		2CA426FA224449D10012BC57 /* S7.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = S7.png; sourceTree = "<group>"; };
 		2CA426FC224451B50012BC57 /* ProductViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductViewController.swift; sourceTree = "<group>"; };
@@ -238,6 +244,7 @@
 				2CBEED6722471F5400B27723 /* OrderDetails.swift */,
 				2CBEED6922473A6400B27723 /* CardShipping.swift */,
 				713851372249D46500815D44 /* Customers.swift */,
+				2C3CF48B224A98F30017BDB0 /* OrderTableViewCell.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -256,6 +263,8 @@
 				9B2E4A0C2241AEB70010CEEF /* ProfileViewController.swift */,
 				713851392249D8F800815D44 /* EditProfileViewController.swift */,
 				7138513B2249DF8400815D44 /* AboutViewController.swift */,
+				2C3CF487224A96B30017BDB0 /* OrderTableViewController.swift */,
+				2C3CF48D224A9C2F0017BDB0 /* OrderDetailsViewController.swift */,
 			);
 			path = ViewController;
 			sourceTree = "<group>";
@@ -449,6 +458,7 @@
 				713851382249D46500815D44 /* Customers.swift in Sources */,
 				2CBEED6A22473A6500B27723 /* CardShipping.swift in Sources */,
 				2CA426F92244477D0012BC57 /* ProductCollectionViewCell.swift in Sources */,
+				2C3CF48C224A98F30017BDB0 /* OrderTableViewCell.swift in Sources */,
 				C612E9C322456962009EF678 /* BaseViewController.swift in Sources */,
 				9B9B318A2232065A0041BE8B /* AppDelegate.swift in Sources */,
 				2CBEED6822471F5400B27723 /* OrderDetails.swift in Sources */,
@@ -458,6 +468,8 @@
 				2CA79DE6223C632B00702955 /* SignUpViewController.swift in Sources */,
 				2CA426FD224451B50012BC57 /* ProductViewController.swift in Sources */,
 				C612E9CC22458E52009EF678 /* ConfirmationViewController.swift in Sources */,
+				2C3CF48E224A9C2F0017BDB0 /* OrderDetailsViewController.swift in Sources */,
+				2C3CF488224A96B30017BDB0 /* OrderTableViewController.swift in Sources */,
 				C612E9D42245B9BD009EF678 /* Products.swift in Sources */,
 				2CBEED6622471C0100B27723 /* Extenstions.swift in Sources */,
 				C612E9D62245CF0F009EF678 /* CartItemTableViewCell.swift in Sources */,

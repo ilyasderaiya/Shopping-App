@@ -44,7 +44,12 @@ class CartViewController: BaseViewController, UITableViewDelegate,UITableViewDat
         
     }
     
-    
+    func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
+        if editingStyle == .delete {
+            m.SCArray.remove(at: indexPath.row)
+            tableView.deleteRows(at: [indexPath], with: .fade)
+        }
+    }
     @IBAction func btnCheckoutClick(_ sender: UIButton) {
         if m.SCArray.count == 0 {
             //Alert For adding Something to Cart
@@ -54,15 +59,18 @@ class CartViewController: BaseViewController, UITableViewDelegate,UITableViewDat
             let checkoutVC = sb.instantiateViewController(withIdentifier: "CheckoutViewController") as! CheckoutViewController
             self.navigationController?.pushViewController(checkoutVC, animated: false)
             let id=String()
-            var tempOrder=Orders(orderId: id.randomStringWithLength(len: 5))
+            let tempOrder=Orders(orderId: id.randomStringWithLength(len: 5))
             for i in m.SCArray{
-                tempOrder.orderDetList.append(OrderDetails(productID: i.productId, productName: i.productName, quantity: i.quantity, total: i.price))
+                tempOrder.orderDetList.append(OrderDetails(productID: i.productId, productName: i.productName, quantity: i.quantity, total: i.price, imgPath: i.imgName))
             }
             m.orderList.append(tempOrder)
         }
         
     }
     
+    @IBAction func EditButtonAction(_ sender: UIBarButtonItem) {
+        print("Edit")
+    }
     
     /*func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 300

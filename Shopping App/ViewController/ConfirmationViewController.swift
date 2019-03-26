@@ -19,6 +19,7 @@ class ConfirmationViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.navigationItem.hidesBackButton=true
         let info=m.cardship
         lblStreetName.text="\(info.appartment), \(info.street)"
         lblSuburb.text=info.city
