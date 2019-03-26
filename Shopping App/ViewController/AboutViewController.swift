@@ -2,7 +2,7 @@
 //  AboutViewController.swift
 //  Shopping App
 //
-//  Created by Srinath Suddala on 2019-03-26.
+//  Created by ilyas Deraiya on 2019-03-22.
 //  Copyright © 2019 Ilyas. All rights reserved.
 //
 
