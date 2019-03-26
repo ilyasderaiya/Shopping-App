@@ -28,19 +28,37 @@ class MenuViewController: UIViewController {
         //homeVC.m=m
         self.navigationController?.pushViewController(homeVC, animated: true)
     }
+    
+    
+    
+    
+    
     @IBAction func btnProfileClick(_ sender: Any) {
         let sb=UIStoryboard(name: "Main", bundle: nil)
         let profileVC=sb.instantiateViewController(withIdentifier: "ProfileVC") as! ProfileViewController
         //self.present(profileVC, animated: true)
         self.navigationController?.pushViewController(profileVC, animated: true)
     }
+    
+    @IBAction func btnAboutClick(_ sender: UIButton) {
+        let sb = UIStoryboard(name: "Main", bundle: nil)
+        let aboutVC = sb.instantiateViewController(withIdentifier: "AboutViewController") as! AboutViewController
+        self.navigationController?.pushViewController(aboutVC, animated: true)
+    }
+    
+    
     @IBAction func btnLogoutClick(_ sender: Any) {
         do {
             try Auth.auth().signOut()
-            
+            /*
             let signInPage = self.storyboard?.instantiateViewController(withIdentifier: "SignInViewController") as! SignInViewController
             let appDelegate = UIApplication.shared.delegate
-            appDelegate?.window??.rootViewController = signInPage
+            appDelegate?.window??.rootViewController = signInPage*/
+          //  let sb = UIStoryboard(name: "Main", bundle: nil)
+        //    let signinVC = sb.instantiateViewController(withIdentifier: "SignInViewController") as! SignInViewController
+       //     self.navigationController?.popToViewController(signinVC, animated: true)
+            
+            self.navigationController?.popToRootViewController(animated: true)
             
         } catch let signOutError as NSError {
             print ("Error signing out: %@", signOutError)

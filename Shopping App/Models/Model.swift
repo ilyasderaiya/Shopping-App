@@ -9,11 +9,12 @@
 import Foundation
 class Model{
     private init(){}
-    static let sharedModel=Model()
-    var SCArray=[ShoppingCart]()
+    static let sharedModel = Model()
+    var SCArray = [ShoppingCart]()
     var p = [Products]()
-    var orderList=[Orders]()
-    var cardship=CardShipping()
+    var orderList = [Orders]()
+    var cardship = CardShipping()
+    var cust = Customers()
     func addVal(){
         p.append(Products(productId: 1, productName: "Iphone XS Max 64GB", productQuantity: 10, productPrice: 1200.00, prdImg: "Xs-Max" ))
         p.append(Products(productId: 2, productName: "Samsung Note 9 64GB", productQuantity: 5, productPrice: 949.99, prdImg: "Note9"))

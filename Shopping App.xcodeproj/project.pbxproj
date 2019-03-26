@@ -18,6 +18,12 @@
 		2CBEED6822471F5400B27723 /* OrderDetails.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CBEED6722471F5400B27723 /* OrderDetails.swift */; };
 		2CBEED6A22473A6500B27723 /* CardShipping.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CBEED6922473A6400B27723 /* CardShipping.swift */; };
 		7111B5632241BB42002A698A /* home.png in Resources */ = {isa = PBXBuildFile; fileRef = 7111B5622241BB41002A698A /* home.png */; };
+		713851322249C50100815D44 /* AdminViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 713851312249C50100815D44 /* AdminViewController.swift */; };
+		713851342249CAF000815D44 /* honor view 20.png in Resources */ = {isa = PBXBuildFile; fileRef = 713851332249CAF000815D44 /* honor view 20.png */; };
+		713851362249CB5E00815D44 /* huawei p20 pro.png in Resources */ = {isa = PBXBuildFile; fileRef = 713851352249CB5E00815D44 /* huawei p20 pro.png */; };
+		713851382249D46500815D44 /* Customers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 713851372249D46500815D44 /* Customers.swift */; };
+		7138513A2249D8F800815D44 /* EditProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 713851392249D8F800815D44 /* EditProfileViewController.swift */; };
+		7138513C2249DF8400815D44 /* AboutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7138513B2249DF8400815D44 /* AboutViewController.swift */; };
 		9B2E4A082241A9380010CEEF /* profile.png in Resources */ = {isa = PBXBuildFile; fileRef = 9B2E4A062241A9380010CEEF /* profile.png */; };
 		9B2E4A092241A9380010CEEF /* menu.png in Resources */ = {isa = PBXBuildFile; fileRef = 9B2E4A072241A9380010CEEF /* menu.png */; };
 		9B2E4A0D2241AEB70010CEEF /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B2E4A0C2241AEB70010CEEF /* ProfileViewController.swift */; };
@@ -65,6 +71,12 @@
 		2CBEED6722471F5400B27723 /* OrderDetails.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderDetails.swift; sourceTree = "<group>"; };
 		2CBEED6922473A6400B27723 /* CardShipping.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardShipping.swift; sourceTree = "<group>"; };
 		7111B5622241BB41002A698A /* home.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = home.png; sourceTree = "<group>"; };
+		713851312249C50100815D44 /* AdminViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdminViewController.swift; sourceTree = "<group>"; };
+		713851332249CAF000815D44 /* honor view 20.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "honor view 20.png"; sourceTree = "<group>"; };
+		713851352249CB5E00815D44 /* huawei p20 pro.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "huawei p20 pro.png"; sourceTree = "<group>"; };
+		713851372249D46500815D44 /* Customers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Customers.swift; sourceTree = "<group>"; };
+		713851392249D8F800815D44 /* EditProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditProfileViewController.swift; sourceTree = "<group>"; };
+		7138513B2249DF8400815D44 /* AboutViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutViewController.swift; sourceTree = "<group>"; };
 		9B2E4A062241A9380010CEEF /* profile.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = profile.png; sourceTree = "<group>"; };
 		9B2E4A072241A9380010CEEF /* menu.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = menu.png; sourceTree = "<group>"; };
 		9B2E4A0C2241AEB70010CEEF /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
@@ -132,6 +144,8 @@
 		9B2E4A052241A9260010CEEF /* Images */ = {
 			isa = PBXGroup;
 			children = (
+				713851352249CB5E00815D44 /* huawei p20 pro.png */,
+				713851332249CAF000815D44 /* honor view 20.png */,
 				C612E9E722468704009EF678 /* cart.png */,
 				C612E9D922462116009EF678 /* Mate20.png */,
 				C612E9DB22462117009EF678 /* Note9.png */,
@@ -217,6 +231,7 @@
 				2CBEED6322471A5C00B27723 /* Orders.swift */,
 				2CBEED6722471F5400B27723 /* OrderDetails.swift */,
 				2CBEED6922473A6400B27723 /* CardShipping.swift */,
+				713851372249D46500815D44 /* Customers.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -226,12 +241,15 @@
 			children = (
 				C612E9C222456962009EF678 /* BaseViewController.swift */,
 				2CA79DE7223C643800702955 /* HomeViewController.swift */,
-				9B2E4A0C2241AEB70010CEEF /* ProfileViewController.swift */,
 				2CA426FC224451B50012BC57 /* ProductViewController.swift */,
 				C612E9BE224568F0009EF678 /* MenuViewController.swift */,
 				C612E9C722458DC0009EF678 /* CartViewController.swift */,
 				C612E9C922458E08009EF678 /* CheckoutViewController.swift */,
 				C612E9CB22458E52009EF678 /* ConfirmationViewController.swift */,
+				713851312249C50100815D44 /* AdminViewController.swift */,
+				9B2E4A0C2241AEB70010CEEF /* ProfileViewController.swift */,
+				713851392249D8F800815D44 /* EditProfileViewController.swift */,
+				7138513B2249DF8400815D44 /* AboutViewController.swift */,
 			);
 			path = ViewController;
 			sourceTree = "<group>";
@@ -305,6 +323,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				713851362249CB5E00815D44 /* huawei p20 pro.png in Resources */,
 				9B9B31942232065B0041BE8B /* LaunchScreen.storyboard in Resources */,
 				C612E9E222462119009EF678 /* Xs-Max.png in Resources */,
 				9B2E4A082241A9380010CEEF /* profile.png in Resources */,
@@ -324,6 +343,7 @@
 				C612E9DF22462119009EF678 /* Pixel3.png in Resources */,
 				C612E9BB224547A2009EF678 /* City road.jpg in Resources */,
 				2CA426FB224449D20012BC57 /* S7.png in Resources */,
+				713851342249CAF000815D44 /* honor view 20.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -386,6 +406,7 @@
 				"${BUILT_PRODUCTS_DIR}/GTMSessionFetcher/GTMSessionFetcher.framework",
 				"${BUILT_PRODUCTS_DIR}/GoogleToolboxForMac/GoogleToolboxForMac.framework",
 				"${BUILT_PRODUCTS_DIR}/GoogleUtilities/GoogleUtilities.framework",
+				"${BUILT_PRODUCTS_DIR}/leveldb-library/leveldb.framework",
 				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
@@ -395,6 +416,7 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMSessionFetcher.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleToolboxForMac.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleUtilities.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/leveldb.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -416,11 +438,13 @@
 				2CA79DE8223C643800702955 /* HomeViewController.swift in Sources */,
 				C612E9CA22458E08009EF678 /* CheckoutViewController.swift in Sources */,
 				2CBEED6422471A5C00B27723 /* Orders.swift in Sources */,
+				713851382249D46500815D44 /* Customers.swift in Sources */,
 				2CBEED6A22473A6500B27723 /* CardShipping.swift in Sources */,
 				2CA426F92244477D0012BC57 /* ProductCollectionViewCell.swift in Sources */,
 				C612E9C322456962009EF678 /* BaseViewController.swift in Sources */,
 				9B9B318A2232065A0041BE8B /* AppDelegate.swift in Sources */,
 				2CBEED6822471F5400B27723 /* OrderDetails.swift in Sources */,
+				713851322249C50100815D44 /* AdminViewController.swift in Sources */,
 				C612E9EA22469568009EF678 /* CheckoutTableViewCell.swift in Sources */,
 				C612E9C822458DC0009EF678 /* CartViewController.swift in Sources */,
 				2CA79DE6223C632B00702955 /* SignUpViewController.swift in Sources */,
@@ -430,6 +454,8 @@
 				2CBEED6622471C0100B27723 /* Extenstions.swift in Sources */,
 				C612E9D62245CF0F009EF678 /* CartItemTableViewCell.swift in Sources */,
 				2CA79DE4223C62A600702955 /* SignInViewController.swift in Sources */,
+				7138513A2249D8F800815D44 /* EditProfileViewController.swift in Sources */,
+				7138513C2249DF8400815D44 /* AboutViewController.swift in Sources */,
 				C612E9CF2245B52B009EF678 /* ShoppingCart.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

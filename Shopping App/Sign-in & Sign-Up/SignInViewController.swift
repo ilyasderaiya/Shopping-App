@@ -20,7 +20,7 @@ class SignInViewController: UIViewController, GIDSignInUIDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         //let userDefault=UserDefaults.standard
-        Model.sharedModel.addVal()
+        //Model.sharedModel.addVal()
         //GIDSignIn.sharedInstance().delegate = self
         GIDSignIn.sharedInstance().uiDelegate = self
         configureGoogleSignInButton()
@@ -48,13 +48,24 @@ class SignInViewController: UIViewController, GIDSignInUIDelegate {
     
     
     @IBAction func btnSigninClick(_ sender: Any) {
+        
+        let sb = UIStoryboard(name: "Main", bundle: nil)
+        
         if (txtEmail.text?.isEmpty)! || (txtPassword.text?.isEmpty)! {
             displayMessage(userMessage: "All field are required to be filled!")
             return
         }
+        
+        if (txtEmail.text == "admin@shopping.com") && (txtPassword.text == "admin@123"){
+            let adminVC = sb.instantiateViewController(withIdentifier: "AdminViewController") as! AdminViewController
+            self.navigationController?.pushViewController(adminVC, animated: true)
+            //self.present(adminVC, animated: true)
+            return
+        }
+        
         Auth.auth().signIn(withEmail: txtEmail.text!, password: txtPassword.text!) { (user, error) in
             if error == nil{
-                let sb = UIStoryboard(name: "Main", bundle: nil)
+                //let sb = UIStoryboard(name: "Main", bundle: nil)
                 let homeVC = sb.instantiateViewController(withIdentifier: "HomeViewController") as! HomeViewController
                 //self.present(homeVC, animated: true)
                 self.navigationController?.pushViewController(homeVC, animated: true)

@@ -7,41 +7,40 @@
 //
 
 import UIKit
+import Firebase
 
 class ProfileViewController: BaseViewController {
     var menuIsShown=false
     @IBOutlet weak var leadingConstraint: NSLayoutConstraint!
+    
+    var m = Model.sharedModel
+    @IBOutlet weak var lblEmail: UILabel!
+    @IBOutlet weak var lblCustName: UILabel!
+    @IBOutlet weak var lblCustDob: UILabel!
+    @IBOutlet weak var lblCustGender: UILabel!
+    @IBOutlet weak var lblCustNumber: UILabel!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.navigationItem.title = "Profile"
+        loadData()
         addSlideMenuButton()
+        addCartButton()
         // Do any additional setup after loading the view.
     }
     
-    /*
-    @IBAction func menuBtnClicked(_ sender: UIBarButtonItem) {
-        if(menuIsShown){
-            leadingConstraint.constant = -200
-            UIView.animate(withDuration: 0.2, delay: 0.0, options: .curveEaseOut, animations: {
-                self.view.layoutIfNeeded()
-            })
-        }
-        else{
-            leadingConstraint.constant=0
-            UIView.animate(withDuration: 0.2, delay: 0.0, options: .curveEaseIn, animations: {
-                self.view.layoutIfNeeded()
-            })
-        }
-        menuIsShown = !menuIsShown
-    }*/
-    
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    func loadData(){
+        let eml = Auth.auth().currentUser?.email
+        lblEmail.text = "Email: \(String(describing: eml!))"
+        lblCustName.text = "Name: \(m.cust.custName)"
+        lblCustDob.text = "Date of Birth: \(m.cust.custDob)"
+        lblCustGender.text = "Gender: \(m.cust.custGender)"
+        lblCustNumber.text = "Phone No. :\(m.cust.custNumber)"
     }
-    */
 
+    @IBAction func btnEditClick(_ sender: UIButton) {
+        let sb = UIStoryboard(name: "Main", bundle: nil)
+        let editVC = sb.instantiateViewController(withIdentifier: "EditProfileViewController") as! EditProfileViewController
+        self.navigationController?.pushViewController(editVC, animated: true)
+    }
 }

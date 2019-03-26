@@ -16,6 +16,11 @@ class HomeViewController: BaseViewController, UICollectionViewDelegate, UICollec
     @IBOutlet weak var ProductCollectionView: UICollectionView!
     @IBOutlet weak var leadingConstraint: NSLayoutConstraint!
     var menuIsShown = false
+    
+    override func viewWillAppear(_ animated: Bool) {
+        
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         addSlideMenuButton()
